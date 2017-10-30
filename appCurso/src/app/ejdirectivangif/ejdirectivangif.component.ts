@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjdirectivangifComponent implements OnInit {
 
+  nombre: string;
+
   constructor() { }
 
   ngOnInit() {
