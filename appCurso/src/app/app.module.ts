@@ -15,6 +15,7 @@ import { EjemploCreacionComponenteComponent } from './ejemplo-creacion-component
 import { EjdirectivangifmetodosComponent } from './ejdirectivangifmetodos/ejdirectivangifmetodos.component';
 import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
 import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangclass.component';
+import { EjdirectivangforComponent } from './ejdirectivangfor/ejdirectivangfor.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EjdirectivangclassComponent } from './ejdirectivangclass/ejdirectivangc
     EjemploCreacionComponenteComponent,
     EjdirectivangifmetodosComponent,
     EjdirectivangstyleComponent,
-    EjdirectivangclassComponent
+    EjdirectivangclassComponent,
+    EjdirectivangforComponent
   ],
   imports: [
     BrowserModule,
