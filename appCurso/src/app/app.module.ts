@@ -13,6 +13,7 @@ import { Ej2waybindingComponent } from './ej2waybinding/ej2waybinding.component'
 import { EjdirectivangifComponent } from './ejdirectivangif/ejdirectivangif.component';
 import { EjemploCreacionComponenteComponent } from './ejemplo-creacion-componente/ejemplo-creacion-componente.component';
 import { EjdirectivangifmetodosComponent } from './ejdirectivangifmetodos/ejdirectivangifmetodos.component';
+import { EjdirectivangstyleComponent } from './ejdirectivangstyle/ejdirectivangstyle.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EjdirectivangifmetodosComponent } from './ejdirectivangifmetodos/ejdire
     Ej2waybindingComponent,
     EjdirectivangifComponent,
     EjemploCreacionComponenteComponent,
-    EjdirectivangifmetodosComponent
+    EjdirectivangifmetodosComponent,
+    EjdirectivangstyleComponent
   ],
   imports: [
     BrowserModule,
