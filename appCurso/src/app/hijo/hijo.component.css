@@ -4,3 +4,7 @@
   border-color: violet;
   padding: 10px;
 }
+
+.tachado{
+  text-decoration: line-through;
+}
