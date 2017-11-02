@@ -7,10 +7,12 @@ import {ProveedoresService} from './servicios/proveedores.service';
 import { ProveedoresComponent } from './proveedores/proveedores/proveedores.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HeaderComponent } from './header/header.component';
+import { AddproveComponent } from './addprove/addprove.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
   {path: 'proveedores', component: ProveedoresComponent},
+  {path: 'addprovee', component: AddproveComponent},
   {path: '**', component: InicioComponent}
 ];
 
@@ -19,7 +21,8 @@ const routes: Routes = [
     AppComponent,
     ProveedoresComponent,
     InicioComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddproveComponent
   ],
   imports: [
     BrowserModule,
