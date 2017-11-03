@@ -2,7 +2,7 @@
   <div class="col col-md"></div>
   <div class="col-10 col-md-8">
     <h2>Añadir nuevo proveedor</h2>
-    <form (ngSubmit)= "onSubmit()" #formpro="ngForm">
+    <form (ngSubmit)="onSubmit()" #formpro="ngForm">
       <div class="form-group">
         <label for="nombre">Nombre</label>
         <input type="text" class="form-control" id="nombre" ngModel name="nombre">
@@ -25,13 +25,10 @@
       </div>
       <div class="form-group">
         <label for="provincia">Provincia</label>
-        <select class="form-control"
-        id="provincia"
-        ngModel
-        name="provincia">
-        <option value="">Selecciona la provincia</option>
-        <option *ngFor="let provincia of provincias" [value] ="provincia">{{provincia}}</option>
-      </select>
+        <select class="form-control" id="provincia" ngModel name="provincia">
+          <option value="">Selecciona la provincia</option>
+          <option *ngFor="let provincia of provincias" [value]="provincia">{{provincia}}</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="telefono">Telefono</label>
@@ -39,18 +36,25 @@
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" class="form-control" id="email" ngModel name="email" required email>
+        <i class="fa fa-check-circle check" *ngIf="email.valid"></i>
+        <i class="fa fa-exclamation-circle uncheck" *ngIf="email.invalid && email.touched"></i>
+        <input type="text" class="form-control" id="email" ngModel name="email" required email #email='ngModel'>
+        <p class="alert alert-danger" *ngIf="email.invalid && email.touched">
+          Por favor introduzca una dirección de correo válida
+        </p>
       </div>
       <div class="form-group">
         <label for="contacto">Contacto</label>
         <input type="text" class="form-control" id="contacto" ngModel name="contacto">
       </div>
-      <button type="submit" class="btn btn-success">Añadir proveedor</button>
+      <button type="submit" class="btn btn-success" [disabled]="formpro.invalid">
+        Añadir proveedor
+      </button>
+      <p class="alert alert-danger" *ngIf="formpro.invalid">
+        Por favor complete todos los campos obligatorios
+      </p>
     </form>
     <hr>
-    <pre>
-      {{ proveedor | json }}
-    </pre>
     <h4>Estado dirty: {{ formpro.controls.email.dirty}}</h4>
     <h4>Estado pristine: {{ formpro.controls.email.pristine}}</h4>
     <h4>Estado touched: {{ formpro.controls.email.touched}}</h4>
