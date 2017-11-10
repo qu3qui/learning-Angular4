@@ -13,12 +13,16 @@ import { HeaderComponent } from './header/header.component';
 import { AddproveComponent } from './addprove/addprove.component';
 import { AddpresComponent } from './presupuestos/addpres/addpres.component';
 import {PresupuestosService} from './servicios/presupuestos.service';
+import { PresupuestosComponent } from './presupuestos/presupuestos/presupuestos.component';
+import { EditpresComponent } from './presupuestos/editpres/editpres.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
   {path: 'proveedores', component: ProveedoresComponent},
   {path: 'addprovee', component: AddproveComponent},
   {path: 'addpres', component: AddpresComponent},
+  {path: 'presupuestos', component: PresupuestosComponent},
+  {path: 'editpres/:id', component: EditpresComponent},
   {path: '**', component: InicioComponent}
 
 ];
@@ -30,7 +34,9 @@ const routes: Routes = [
     InicioComponent,
     HeaderComponent,
     AddproveComponent,
-    AddpresComponent
+    AddpresComponent,
+    PresupuestosComponent,
+    EditpresComponent
   ],
   imports: [
     BrowserModule,
