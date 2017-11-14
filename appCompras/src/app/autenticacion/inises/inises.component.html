@@ -13,6 +13,11 @@
         El usuario o contraseña no es correcto
       </p>
     </form>
+    <p>Si no dispone de cuenta pulse
+      <a routerLink="/registro" *ngIf="!mensaje">
+        aquí
+      </a>
+    </p>
   </div>
   <div class="col col-md"></div>
 </div>
