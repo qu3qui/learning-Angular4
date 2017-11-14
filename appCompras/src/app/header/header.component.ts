@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AutenticacionService} from '../servicios/autenticacion.service';
+import {Router, ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private autenticacionService: AutenticacionService,
+  private router: Router,
+private activatedRouter: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+  isAuth() {
+    return this.autenticacionService.isAuthenticated();
+  }
+  onLogout() {
+    this.autenticacionService.logout();
+    this.router.navigate(['/inicio']);
+  }
 }
