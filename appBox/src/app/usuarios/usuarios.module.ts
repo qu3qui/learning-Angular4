@@ -6,13 +6,17 @@ import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.compo
 import { AgregarUsuariosComponent } from './agregar-usuarios/agregar-usuarios.component';
 import { ActualizarUsuariosComponent } from './actualizar-usuarios/actualizar-usuarios.component';
 
+import { NbMenuModule, NbMenuService, NbCardModule} from '@nebular/theme';
+
 @NgModule({
   imports: [
     CommonModule,
     NbLayoutModule,
-    NbSidebarModule
+    NbSidebarModule,
+    NbMenuModule,
+    NbCardModule
   ],
   declarations: [ListarUsuariosComponent, AgregarUsuariosComponent, ActualizarUsuariosComponent],
-  providers: [NbSidebarService]
+  providers: [NbSidebarService, NbMenuService]
 })
 export class UsuariosModule { }
